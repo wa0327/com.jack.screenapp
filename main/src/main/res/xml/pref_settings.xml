@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://com.jack.screenapp/preference">
+
+    <SwitchPreference
+        android:key="mask_enabled"
+        android:title="啟用螢幕遮罩"
+        android:summary="降低螢幕藍光亮度，減輕手機螢幕對眼睛的傷害。"/>
+
+    <com.jack.screenapp.preference.SeekBarPreference
+        android:dependency="mask_enabled"
+        android:key="mask_alpha"
+        android:title="透明度"
+        myapp:max="255"/>
+
+    <com.jack.screenapp.preference.SeekBarPreference
+        android:dependency="mask_enabled"
+        android:key="mask_red"
+        android:title="紅色值"
+        myapp:max="255"/>
+
+    <com.jack.screenapp.preference.SeekBarPreference
+        android:dependency="mask_enabled"
+        android:key="mask_green"
+        android:title="綠色值"
+        myapp:max="255"/>
+
+    <com.jack.screenapp.preference.SeekBarPreference
+        android:dependency="mask_enabled"
+        android:key="mask_blue"
+        android:title="藍色值"
+        myapp:max="255"/>
+
+</PreferenceScreen>
